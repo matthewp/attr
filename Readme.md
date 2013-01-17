@@ -1,4 +1,3 @@
-
 # attr
 
   Cross-browser attribute manipulation.
@@ -10,7 +9,7 @@
 ## Examples
 
     attr(el).get('id'); // -> foo
-	attr(el).set('id', 'foo'); // -> undefined
+	attr(el).set('id', 'foo'); // -> `attr(el)` to allow chaining
 
 ## API
 

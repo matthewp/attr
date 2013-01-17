@@ -28,6 +28,8 @@ Attr.prototype.set = function(attr, val) {
   } else {
     fetch(this.el, attr).value = val;
   }
+  
+  return this;
 };
 
 Attr.prototype.has = function(attr) {
