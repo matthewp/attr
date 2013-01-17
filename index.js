@@ -20,8 +20,11 @@ Attr.prototype.get = function(attr) {
 };
 
 Attr.prototype.set = function(attr, val) {
-  return (this.el.setAttribute && this.el.setAttribute(attr, val))
-    || fetch(this.el, attr).value = val;
+  if(this.el.setAttribute) {
+    this.el.setAttribute(attr, val);
+  } else {
+    fetch(this.el, attr).value = val;
+  }
 };
 
 Attr.prototype.has = function(attr) {
