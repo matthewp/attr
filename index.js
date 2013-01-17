@@ -1,3 +1,6 @@
+/*
+** Fallback for older IE without get/setAttribute
+ */
 function fetch(el, attr) {
   var attrs = el.attributes;
   for(var i = 0; i < attrs.length; i++) {
