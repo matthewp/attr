@@ -19,7 +19,7 @@ function Attr(el) {
 
 Attr.prototype.get = function(attr) {
   return (this.el.getAttribute && this.el.getAttribute(attr))
-    || fetch(this.el, attr) === null || fetch(this.el, attr).value;
+    || (fetch(this.el, attr) === null ? null : fetch(this.el, attr).value);
 };
 
 Attr.prototype.set = function(attr, val) {
@@ -28,7 +28,7 @@ Attr.prototype.set = function(attr, val) {
   } else {
     fetch(this.el, attr).value = val;
   }
-  
+
   return this;
 };
 
