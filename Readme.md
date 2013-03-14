@@ -29,6 +29,10 @@ Gets the attribute ``name`` as a string.
 
 Sets the attribute ``name`` to ``val``.
 
+#### Attr#has(name)
+
+Returns true if the attribute ``name`` is set.
+
 ## License
 
   MIT
